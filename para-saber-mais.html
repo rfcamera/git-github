@@ -1,0 +1,135 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Git e GitHub - Para saber mais...</title>
+</head>
+
+<body class="darkmode">
+    <main class="main">
+        <div class="formattedText" data-external-links="">
+            <p>Vimos no vídeo anterior que para fazer o link entre o repositório local, que está em nosso computador,
+                com o
+                repositório remoto, que está no GitHub, devemos utilizar o comando <code>git remote</code>.</p>
+            <p>Esse comando tem algumas variações e parâmetros opcionais que podem ser úteis em certas situações.
+                Confira a
+                seguir exemplos de uso desse comando:</p>
+            <p>1 - Adicionar um repositório remoto:</p>
+            <p>Quando você deseja estabelecer uma conexão entre seu repositório local e um repositório remoto, como
+                aquele
+                hospedado no GitHub, o comando <code>git remote add</code> é a ferramenta essencial. Essa etapa é
+                crucial
+                para
+                possibilitar a colaboração e o compartilhamento de código com outras pessoas, bem como para fazer backup
+                de
+                seu
+                trabalho em um servidor remoto.</p>
+            <p>A sintaxe básica do comando é a seguinte:</p>
+            <pre class="prettyprint"><code class="hljs language-csharp">git remote <span class="hljs-keyword">add</span> apelido url
+        </code><button type="button" class="clipit">Copiar código</button></pre>
+            <p>'apelido': Este é um nome que você atribui ao repositório remoto. Geralmente, se utiliza nomes
+                descritivos,
+                como
+                "origin" para o repositório principal no GitHub, mas você pode escolher nomes que façam sentido para o
+                seu
+                projeto.</p>
+            <p>'url': Aqui, você insere a URL do repositório remoto. Esta URL é única para cada repositório remoto e
+                serve
+                como
+                o endereço para acessar e interagir com ele pela internet. Certifique-se de copiar a URL correta do
+                repositório
+                que deseja adicionar.</p>
+            <p>2 - Listar os repositórios remotos:</p>
+            <p>Para listar os repositórios remotos associados ao seu projeto local, você pode utilizar o comando
+                <code>git remote -v</code>. Isso exibirá uma lista de todos os repositórios remotos vinculados ao seu
+                projeto,
+                juntamente com suas URLs. Veja um exemplo:
+            </p>
+            <pre class="prettyprint"><code class="hljs language-undefined">git remote -v
+        </code><button type="button" class="clipit">Copiar código</button></pre>
+            <p>A saída será algo semelhante a:</p>
+            <pre class="prettyprint"><code class="hljs language-perl">origin   https:<span class="hljs-regexp">//gi</span>thub.com/seu-usuario/seu-projeto.git (fetch)
+        origin   https:<span class="hljs-regexp">//gi</span>thub.com/seu-usuario/seu-projeto.git (<span class="hljs-keyword">push</span>)
+        </code><button type="button" class="clipit">Copiar código</button></pre>
+            <p>Essa lista é útil para verificar se os repositórios remotos estão configurados corretamente. Obs: Vai
+                aparecer
+                duplicado mesmo, pois o Git separa a url de envio de commits (push) da url de baixar commits (fetch).
+            </p>
+            <p>3 - Remover um repositório remoto:</p>
+            <p>Caso você não precise mais de um repositório remoto específico, pode removê-lo com o comando
+                <code>git remote remove apelido</code>. Substitua 'apelido' pelo nome do repositório remoto que deseja
+                remover.
+                Aqui está um exemplo:
+            </p>
+            <pre class="prettyprint"><code class="hljs language-csharp">git remote <span class="hljs-keyword">remove</span> origin
+        </code><button type="button" class="clipit">Copiar código</button></pre>
+            <p>Após a execução deste comando, o repositório remoto chamado "origin" será desvinculado do seu projeto
+                local.
+            </p>
+            <p>4 - Alterar a URL de um repositório remoto:</p>
+            <p>Às vezes, é necessário atualizar a URL de um repositório remoto, como quando a URL do servidor do GitHub
+                é
+                modificada ou quando você copiou a URL incorreta ao adicionar o repositório remoto. Use o comando
+                <code>git remote set-url apelido nova_url</code> para realizar essa atualização. Substitua 'apelido'
+                pelo
+                nome
+                do repositório remoto e 'nova_url' pela nova URL que você deseja associar a ele. Aqui está um exemplo:
+            </p>
+            <pre class="prettyprint"><code class="hljs language-cpp">git remote set-url origin https:<span class="hljs-comment">//github.com/seu-usuario/seu-repositorio.git</span>
+        </code><button type="button" class="clipit">Copiar código</button></pre>
+            <p>Isso atualizará a URL do repositório remoto "origin" para a nova URL especificada.</p>
+            <p>5 - Alterar o apelido de um repositório remoto:</p>
+            <p>Se você deseja renomear um repositório remoto, use o comando
+                <code>git remote rename apelido novo_apelido</code>.
+                Substitua 'apelido' pelo nome atual do repositório remoto e 'novo_apelido' pelo novo nome que você
+                deseja
+                atribuir a ele. Aqui está um exemplo:
+            </p>
+            <pre class="prettyprint"><code class="hljs language-lua">git remote <span class="hljs-built_in">rename</span> origin novo-origin
+        </code><button type="button" class="clipit">Copiar código</button></pre>
+            <p>Isso renomeará o repositório remoto de "origin" para "novo-origin".</p>
+            <p>Lembre-se de que o comando git remote é fundamental para a gestão de conexões entre seu repositório local
+                e
+                repositórios remotos, permitindo a colaboração eficiente e o controle de versão. Praticar esses comandos
+                em
+                seu
+                ambiente de desenvolvimento ajudará a consolidar seu entendimento.</p>
+        </div>
+        <div class="formattedText" data-external-links="">
+            <p>Agora é com você! Compartilhe o projeto do curso em sua conta do GitHub, criando um repositório remoto no
+                GitHub e sincronizando o código local com ele, conforme foi demonstrado ao longo dessa aula.</p>
+        </div>
+        <div class="container">
+            <h3 class="task-feedback-banner-title">
+                Opinião do instrutor
+            </h3>
+        </div>
+        <div class="formattedText" data-external-links="">
+            <p>Você precisará criar um repositório no GitHub e executar os comandos do git no terminal do projeto em seu
+                computador:</p>
+            <pre class="prettyprint">
+            <code class="hljs language-sql">
+            git init
+            git <span class="hljs-keyword">add</span> .
+            git <span class="hljs-keyword">commit</span> <span class="hljs-operator">-</span>m "projeto inicial"
+            git remote <span class="hljs-keyword">add</span> origin git<span class="hljs-variable">@github</span>.com:SEU_USUARIO<span class="hljs-operator">/</span>SEU_REPOSITORIO
+            git push <span class="hljs-operator">-</span>u origin main
+            </code>
+            <button type="button" class="clipit">Copiar código</button>
+        </pre>
+            <blockquote>
+                <p>Lembre-se de substituir <code>SEU_USUARIO</code> pelo seu username definido ao criar a sua conta no
+                    GitHub e <code>SEU_REPOSITORIO</code> pelo nome do repositório que você criou no GitHub.</p>
+            </blockquote>
+        </div>
+    </main>
+</body>
+
+</html>
