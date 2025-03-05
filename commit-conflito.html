@@ -1,0 +1,90 @@
+<div class="container">
+	
+
+
+
+
+
+
+
+
+
+
+    <div class="video settings">
+        <button type="button" class="settings-button" aria-label="Configurações">
+            <svg class="settings-button-icon">
+                <use xlink:href="/assets/images/classPage/icon-menu-icons.svg#MENU_SETTINGS"></use>
+            </svg>
+        </button>
+        <div class="settings-box">
+            <ul class="settings-box-list">
+                
+                    <li class="settings-box-item">
+                        <button data-light-mode="Modo claro" data-dark-mode="Modo noturno" class="light-mode-action --menu-setting darkModeButton settings-box-item-darkmode">
+                                Modo claro
+                        </button>
+                    </li>
+                
+                
+                    
+                    
+                    
+                    
+                        
+                            <li class="settings-box-item settings-box-item-suggestion"><a href="/suggestions/new/git-github-compartilhando-colaborando-projetos/144180/question">Sugerir alteração</a></li>
+                        
+                    
+                
+                
+            </ul>
+            <span class="settings-box-title"></span>
+        </div>
+    </div>
+    
+            <div class="formattedText" data-external-links="">
+                <p>Quando você está trabalhando em um projeto grande, principalmente se muitas pessoas estão envolvidas, é comum aparecerem os chamados "conflitos". Mas o que são esses conflitos?</p>
+    <p>Imagine que o projeto é um grande quebra-cabeça e cada pessoa está trabalhando em uma parte dele. Se duas pessoas tentarem encaixar peças diferentes no mesmo lugar, surge um conflito. No mundo do desenvolvimento de software, isso ocorre quando duas pessoas editam o mesmo pedaço de código de formas diferentes. </p>
+    <p>Há várias formas de resolver conflitos, podemos utilizar a linha de comando ou o próprio Visual Studio Code. O editor de código fornece mais de uma forma para resolver conflitos de mesclagem entre o código local (o que está na sua máquina) e o remoto(o que está no github, por exemplo).</p>
+    <p>Uma possibilidade é utilizar a ferramenta <strong>“Merge Editor”.</strong> Vamos conferir seu funcionamento?</p>
+    <h2>Resolvendo conflitos no Merge Editor</h2>
+    <p>No exemplo a seguir, nós temos duas versões de um código na branch <code>main</code>: uma no repositório do github e outra modificação diferente no ambiente local. Ao realizarmos o <code>git -push</code> para a branch <code>main</code>, ocorreu um <strong>conflito</strong> e precisamos resolvê-lo para que a atualização suba para o repositório no github corretamente, como a imagem nos apresenta:</p>
+    <p><img src="https://cdn1.gnarususercontent.com.br/1/766890/6278fd28-f0f7-4864-96ac-111bcd929e22.png" alt=" ">Para solucionarmos o problema, clicamos na opção  “Resolve in Merge Editor”, como no print abaixo:</p>
+    <p><img src="https://cdn1.gnarususercontent.com.br/1/766890/24d05f33-c997-495c-9899-79d193962ab2.png" alt="Captura de tela que apresenta um botão com o texto &quot;Resolve in Merge Editor&quot;">  </p>
+    <p>Após o clique, somos redirecionados para outra aba que apresenta as modificações no arquivo, vamos entender o que cada opção significa:</p>
+    <p><img src="https://cdn1.gnarususercontent.com.br/1/766890/54aaf673-9ca2-422d-a21e-daa1ff78464a.png" alt="Uma captura de tela representando o editor de mesclagem, uma ferramenta usada para resolver conflitos e mesclar versões de código de maneira integrada. Temos uma nova aba chamada &quot;merging: index.html&quot;. Há a divisão da tela em três partes: Incoming, Current, Result. No canto inferior direito da tela há um botão &quot;complete merge&quot;">  </p>
+    
+    
+    <p>A tela do Visual Studio Code está dividida em três partes:</p>
+    <ul><li><p><strong>Incoming (remoto)</strong>: modificações que chegam do repositório remoto.</p>
+    </li><li><p><strong>Current (local)</strong>: modificações locais.</p>
+    </li><li><p><strong>Result (resultado)</strong>: resultado do <code>merge</code>, ou seja, a resolução dos conflitos de mesclagem. É o estado atual do arquivo.</p>
+    </li></ul>
+    <blockquote>
+    <p>Os quadrados na cor amarela em volta do código no campo “Incoming” e “Current” são  <strong>marcadores de conflito</strong>:  exibem o conteúdo  que apresenta conflito no arquivo.</p>
+    </blockquote>
+    <h2>Campo Incoming</h2>
+    <p><strong>-&gt;</strong> No <strong>campo “Incoming”,</strong> acima da linha de código dos marcadores de conflito no campo há outras opções que resultam na alteração do código atual:</p>
+    <ul><li><strong>Accept Incoming</strong>: aceita modificações oriundas do <strong>remoto</strong></li></ul>
+    <p><img src="https://cdn1.gnarususercontent.com.br/1/766890/61948d1f-45ee-40dd-91fb-93c2cd4349ac.png" alt="Captura de tela com o campo Incoming, Current, e o Result com o código do campo Incoming">  </p>
+    <ul><li><strong>Accept Combination Incoming First</strong>: realiza a combinação com as linhas do código do repositório remoto no topo.</li></ul>
+    <p><img src="https://cdn1.gnarususercontent.com.br/1/766890/afe12393-1760-4aaa-bd3e-177a934264d1.png" alt="Captura de tela com o campo Incoming, Current, e o Result com o código do campo Incoming e Current respectivamente">  </p>
+    <ul><li><strong>Ignore:</strong> ignora as modificações.</li></ul>
+    
+    
+    <h2>Campo Current</h2>
+    <p><strong>-&gt;</strong> O campo <strong>“Current”</strong> trabalha com as modificações locais do documento.</p>
+    <ul><li><p><strong>Accept Current</strong>: Aceita a modificação local no resultado do documento</p>
+    </li><li><p><strong>Accept combination Current First</strong>: Aceita a combinação local + remoto.
+    Nos resultados a linha de código com a tag <code>&lt;h2&gt;</code> fica antes de <code>&lt;h1&gt;</code>, comprovando que o código local é inserido primeiro que o remoto.</p>
+    </li></ul>
+    <p><img src="https://cdn1.gnarususercontent.com.br/1/766890/08c39d10-b080-4bce-8a84-f3aeaccfa9f3.png" alt="Captura de tela com o campo Incoming, Current, e o Result com o código do campo Current e Incoming respectivamente">  </p>
+    <ul><li><strong>Ignore</strong>: ignora as modificações no resultado no final.</li></ul>
+    <p><strong>Após selecionarmos a opção com o resultado desejado, devemos:</strong></p>
+    <ol><li>Salvar o arquivo </li><li>Clicar no botão “complete Merge” </li><li>Realizar o commit das modificações </li><li>Sincronizar as modificações realizando o push.</li></ol>
+    <h2>Para saber mais:</h2>
+    <ul><li><p><a href="https://learn.microsoft.com/pt-br/visualstudio/version-control/git-with-visual-studio?view=vs-2022" rel="nofollow noopener" target="_blank">Como o Visual Studio facilita o controle de versão com o Git</a></p>
+    </li><li><p><a href="https://learn.microsoft.com/pt-br/visualstudio/version-control/git-resolve-conflicts?view=vs-2022" rel="nofollow noopener" target="_blank">Como resolver conflitos de mesclagem no Visual Studio</a></p>
+    </li><li><p><a href="https://www.youtube.com/watch?v=HosPml1qkrg" rel="nofollow noopener" target="_blank">Um guia muito útil para mesclar conflitos - em Inglês</a></p>
+    </li></ul>
+            </div>
+        </div>
